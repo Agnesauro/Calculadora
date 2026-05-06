@@ -1,0 +1,121 @@
+:root{
+    --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    --glass-bg: rgb(69, 44, 108);
+    --text-white: #ffffff;
+    --text-gray: #8a95a1;
+    --purple-primary: #6e1660;
+    --purple-hover: #6e1690;
+    --btn-bg: rgba(255, 255, 255, 0.1);
+    --btn-hover: rgba(255, 255, 255, 0.2);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    background: var(--bg-gradient);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.count{
+    width: 100%;
+    max-width: 320px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 2rem;
+    padding: 1.5rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 10px 10px -6px rgba(0, 0, 0, 0.0);
+}
+
+.buttons{
+    margin-bottom: 1.5rem;
+    padding: 0.05rem;
+    text-align: right;
+}
+
+#history{
+    color: var(--text-gray);
+    font-size: 0.875rem;
+    height: 1.5rem;
+    overflow: hidden;
+    transition: all 0.3 ease;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#display{
+    color: var(--text-white);
+    font-size: 2.5rem;
+    font-weight: 300;
+    letter-spacing: -0.05rem;
+    text-align: right;
+    margin-bottom: 1rem;
+    background-color: aliceblue;
+    color: #6e1660;
+    padding-right: 0.5rem;
+    border-radius: 50px;
+}
+
+.text-small{
+    font-size: 1.875rem !important;
+}
+
+.buttons-grid{
+    display: grid;
+    grid-template-columns: repeat(4, fr);
+    gap: 0.75rem;
+}
+
+.btn{
+    border: none;
+    outline: none;
+    padding: 1rem 0;
+    border-radius: 1.25rem;
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: var(--text-white);
+    background-color: var(--purple-primary);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: var(--btn-bg);
+    backdrop-filter: blur(12px);
+    color: var(--text-white);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 2rem;
+    padding: 1.5rem;
+}
+
+.btn:hover{
+    background-color: var(--purple-hover);
+}
+
+.btn:active{
+    transform: scale(0.95);
+}
+
+.btn-clear{
+    grid-column: span2;
+    color: #6e1690;
+    font-weight: 600;
+}
+
+.btn-equal{
+    grid-column: span4;
+    background-color: #6e1690;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+
